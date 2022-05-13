@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>CV Form</title>
+<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+	rel="stylesheet">
+<style type="text/css">
+	input, textarea {
+		background-color: #babdc2;
+		border-radius: 0.375rem;
+	}
+</style>
+</head>
+<body class="bg-green-600">
+	<div class="bg-white rounded-xl p-5 ml-56 mt-5 w-1/3">
+		<div class="text-center">
+			<h1 class="text-2xl font-extrabold">CV Form</h1>
+		</div>
+		<form action="read-cv.jsp" method="post" id="cv">
+			<table>
+				<tr>
+					<td><label>Name: </label></td>
+					<td><input type="text" name="userName"></td>
+				</tr>
+				<tr>
+					<td><label>Date of birth: </label></td>
+					<td><input type="date" name="dob"></td>
+				</tr>
+				<tr>
+					<td><label>Gender: </label></td>
+					<td>
+						<input type="radio" name="gender" required="required" value="Male">Male
+						<input type="radio" name="gender" required="required" value="Female">Female
+					</td>
+				</tr>
+				<tr>
+					<td><label>Education: </label></td>
+					<td><input type="text" name="education"></td>
+				</tr>
+				<tr>
+					<td><label>City</label></td>
+					<td><input type="text" name="city"></td>
+				</tr>
+				<tr>
+					<td><label>Phone Number:</label></td>
+					<td><input type="tel" name="phone"></td>
+				</tr>
+				<tr>
+					<td><label>Email</label></td>
+					<td><input type="email" name="email"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><label>Language: </label></td>
+				</tr>
+				<tr>
+					<td>
+						<input type="checkbox" name="languages" value="English">English
+						<input type="checkbox" name="languages" value="Japanese" class="ml-4">Japanese
+					</td>
+					<td><input type="checkbox" name="languages" value="Korea">Korea
+						<input type="checkbox" name="languages" value="others" class="ml-4">Others
+					</td>
+				</tr>
+				<tr>
+					<td><label>Work Experience: </label></td>
+					<td><textarea name="workExperience"></textarea></td>
+				</tr>
+				<tr>
+					<td><label>Skills: </label></td>
+					<td><textarea name="skills"></textarea></td>
+				</tr>
+				<tr>
+					<td><label>Professional Certifications (Please write name by separating with ","): </label></td>
+					<td><textarea name="certificates"></textarea></td>
+				</tr>
+				<tr>
+					<td><label>Volunteer Experience: </label></td>
+					<td><textarea name="volunteer"></textarea></td>
+				</tr>
+				<tr>
+					<td><label>Award: </label></td>
+					<td><textarea name="award"></textarea></td>
+				</tr>
+				<tr>
+					<td><input type="submit" value="Submit" class="p-4 bg-blue-500 text-white"></td>
+					<td><input type="button" value="Cancel" class="p-4 bg-red-500 text-white" onclick="clearData()">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<script>
+		function clearData(){
+			document.getElementById("cv").reset();
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee Form</title>
+<style>
+input{
+	margin: 10px;
+}
+</style>
+</head>
+<body>
+
+<h2>Employee Registration Form</h2>
+
+<form action="read-employee-form.jsp" method="get">
+
+<label>EmployeeName</label>
+<input type="text" name="employeeName" placeholder="Enter Your Name" required="required">
+<br>
+
+<label>EmployeeEmail</label>
+<input type="email" name="employeeEmail" placeholder="Enter Your Email" required="required">
+<br>
+
+<label>EmployeePassword</label>
+<input type="password" name="employeePassword" placeholder="Enter Your Password" required="required">
+<br>
+
+<label>Employee Role</label>
+<select name="employeeRole" required="required">
+	<option disabled="disabled">Choose Your Role</option>
+	<option value="manager">MANAGER</option>
+	<option value="staff">STAFF</option>
+	<option value="admin">ADMIN</option>
+	<option value="executive">EXECUTIVE</option>
+</select>
+<br><br>
+
+<input type="radio" name="employeeGender" required="required" value="Male">Male
+<input type="radio" name="employeeGender" required="required" value="Female">Female
+<br>
+
+<label>Employee Expected Field</label><br>
+<input type="checkbox" name="employeeExpectedField" value="Programming">Programming<br>
+<input type="checkbox" name="employeeExpectedField" value="Database">Database<br>
+<input type="checkbox" name="employeeExpectedField" value="AI">AI<br>
+<input type="checkbox" name="employeeExpectedField" value="DataMining">DataMining<br>
+<input type="checkbox" name="employeeExpectedField" value="Research">Research<br>
+
+<input type="submit" value="Submit">
+
+</form>
+</body>
+</html>
